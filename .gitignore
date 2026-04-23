@@ -1,0 +1,14 @@
+node_modules/
+local.settings.json
+.DS_Store
+
+# Log files
+*.log
+npm-debug.log*
+
+# Editor-specific directories
+.vscode/
+.idea/
+
+# Environment variables file
+.env

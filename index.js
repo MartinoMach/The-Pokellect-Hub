@@ -1,0 +1,13 @@
+require("./api/functions/register");
+require("./api/functions/login");
+require("./api/functions/getProfile");
+require("./api/functions/updateProfile");
+require("./api/functions/addFranchise");
+require("./api/functions/getMetadata");
+require("./api/functions/addGlobalCard");
+require("./api/functions/importTcgapiCard");
+require("./api/functions/getGlobalCards");
+require("./api/functions/uploadCardImage");
+require("./api/functions/addToBinder");
+require("./api/functions/getMyBinder");
+require("./api/functions/removeFromBinder");

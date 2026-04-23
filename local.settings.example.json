@@ -1,0 +1,32 @@
+{
+  "IsEncrypted": false,
+  "Host": {
+    "CORS": "*",
+    "CORSCredentials": false
+  },
+  "Values": {
+    "AzureWebJobsStorage": "<azure-functions-host-storage-connection-string>",
+    "AZURE_STORAGE_CONNECTION_STRING": "<azure-storage-connection-string>",
+    "AZURE_BLOB_STORAGE_CONNECTION_STRING": "<azure-blob-storage-connection-string>",
+    "BLOB_CONTAINER_NAME": "card-images",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "COSMOS_CONNECTION_STRING": "<azure-cosmos-connection-string>",
+    "COSMOS_ENDPOINT": "",
+    "COSMOS_KEY": "",
+    "COSMOS_DATABASE_NAME": "Inst347DB",
+    "AUTH_MODE": "optional",
+    "JWT_SECRET": "replace-this-in-production",
+    "JWT_EXPIRES_IN": "7d",
+    "APITCG_BASE_URL": "https://www.apitcg.com/api",
+    "APITCG_API_KEY": "<apitcg-api-key>",
+    "APITCG_SCHEMA_CACHE_TTL_MS": "600000",
+    "APITCG_SCHEMA_SAMPLE_LIMIT": "3",
+    "PRICE_PROVIDER": "apitcg",
+    "EBAY_ENV": "production",
+    "EBAY_CLIENT_ID": "",
+    "EBAY_CLIENT_SECRET": "",
+    "EBAY_SCOPE": "https://api.ebay.com/oauth/api_scope",
+    "EBAY_MARKETPLACE_ID": "EBAY_US",
+    "EBAY_USE_MOCK_PRICES": "false"
+  }
+}

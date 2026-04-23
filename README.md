@@ -1,9 +1,8 @@
-# inst347-project
-Respository for INST347 Project
+# Pokellect Hub
 
-Project entails develop card collection storage, price tracking, and social platform to connect with other card collecting enthusiasts. Tools in Azure are integrated and external APIs.
+Pokellect Hub is a website that lets you build and manage your card collection with ease while tracking real-time card prices and trends. It combines smart storage, live price updates, and a social space where collectors can connect, trade, and share their collections.
 
-Collaborators --> Harshita Jeyakumar, Martins Okorie, Neel Patel, Ethan Tran, Chris Xu
+Designed for collectors who want more than just a database, Pokellect turns collecting into a connected, dynamic experience powered by modern cloud tools and external data APIs.
 
 ## Backend (Azure Functions + Cosmos DB)
 

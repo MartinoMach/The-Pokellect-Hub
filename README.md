@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./card-management/public/logo.png" alt="Pokéllect Logo" width="150"/>
+</p>
+
 # 🌟 Pokéllect
 
 > **The Ultimate Trading Card Game (TCG) Hub**

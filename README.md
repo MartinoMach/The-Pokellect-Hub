@@ -1,4 +1,4 @@
-<h1 align="center">🌟 Pokéllect</h1>
+<h1 align="center"> 𝐏𝐨𝐤é𝐥𝐥𝐞𝐜𝐭</h1>
 
 <p align="center">
   <img src="./card-management/public/logo.png" alt="Pokéllect Logo" width="150"/>

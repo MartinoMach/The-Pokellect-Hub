@@ -10,30 +10,6 @@ const team = [
     role: "Backend Engineer",
     img: "/martins.png",
     desc: "Architecting robust APIs and seamless integrations for real-time card data.",
-  },
-  {
-    name: "Chris Xu",
-    role: "DevOps",
-    img: "/chris.png",
-    desc: "Ensuring cloud scalability, smooth deployments, and reliable infrastructure.",
-  },
-  {
-    name: "Harshitha Jeyakumar",
-    role: "Full Stack Engineer",
-    img: "/harshitha.png",
-    desc: "Bridging the gap between sleek interfaces and powerful backend logic.",
-  },
-  {
-    name: "Ethan Tran",
-    role: "Database Architect",
-    img: "/ethan.png",
-    desc: "Designing secure, high-performance Cosmos DB schemas for your collections.",
-  },
-  {
-    name: "Neel Patel",
-    role: "Testing and Performance Engineer",
-    img: "/neel.png",
-    desc: "Guaranteeing a bug-free, lightning-fast experience for every user.",
   }
 ];
 

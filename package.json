@@ -1,0 +1,12 @@
+{
+  "name": "inst347-monorepo",
+  "private": true,
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev:frontend": "cd card-management && npm run dev",
+    "test": "cd backend && npm test"
+  },
+  "engines": {
+    "node": ">=20.0.0 <25.0.0"
+  }
+}

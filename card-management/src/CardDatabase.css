@@ -1,0 +1,101 @@
+/* ====== Database Specific Filter Container ====== */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-end;
+  background-color: rgba(59, 130, 246, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.filter-action-group {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1px; /* Aligns button with inputs */
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-group label {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.filter-input, .filter-select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.filter-input:focus, .filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.filter-select option {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Small tag/badge identifying the card franchise on the grid */
+.card-franchise-badge {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Styles for the new Add Card modal */
+.advanced-toggle-link {
+  margin-right: auto;
+  color: #9ca3af;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.advanced-toggle-link:hover {
+  color: #ffffff;
+}
+
+.api-search-results {
+  min-height: 220px; /* Ensure it doesn't collapse while loading */
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.result-details small {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}

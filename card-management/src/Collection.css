@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.dashboard-container {
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ====== Dashboard Content ====== */
+.dashboard-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 100px; /* Provides space below the fixed navbar */
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  padding-bottom: 1.5rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #ffffff;
+}
+
+.dashboard-subtitle {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  margin: 0;
+}
+
+/* ====== Cards Grid & Empty State ====== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  min-height: 40vh;
+}
+
+.empty-state {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(59, 130, 246, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px dashed rgba(59, 130, 246, 0.2);
+  border-radius: 1rem;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 0 0 0.5rem 0;
+}
+
+.empty-state p {
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ====== Skeleton Loaders ====== */
+.skeleton-grid {
+  display: contents;
+}
+
+.skeleton-card {
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.05) 25%, rgba(59, 130, 246, 0.15) 50%, rgba(59, 130, 246, 0.05) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite;
+  border: 1px solid rgba(59, 130, 246, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes skeleton-loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ====== Collection Display Cards ====== */
+.collection-card {
+  background-color: rgba(59, 130, 246, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.collection-card-img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.4));
+  cursor: pointer;
+}
+
+.collection-card h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* ====== Glassmorphism Modal Dialog ====== */
+.glass-dialog {
+  margin: auto;
+  background-color: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 1.5rem;
+  padding: 0;
+  color: white;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.glass-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.dialog-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.dialog-title {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.dialog-subtitle {
+  color: #d1d5db;
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+}
+
+.dialog-input {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: 1.5rem;
+}
+
+.dialog-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+/* ====== Modal Search Results ====== */
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 220px;
+  overflow-y: auto;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.search-result-item:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.search-result-item.selected {
+  background: rgba(59, 130, 246, 0.3);
+  border-color: #3b82f6;
+}
+
+.result-img {
+  width: 40px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.dialog-msg { margin: 0 0 1rem 0; font-size: 0.95rem; }
+.dialog-msg.success { color: #86efac; }
+.dialog-msg.error { color: #fca5a5; }
+.no-results { color: #9ca3af; text-align: center; margin-top: 1rem; }
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  width: 100%;
+}
+
+.btn-cancel {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: #d1d5db;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* ====== Card Stats Modal ====== */
+.stats-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.stats-details {
+  width: 100%;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.stats-details p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+.stats-details strong {
+  color: #3b82f6;
+}
+
+/* ====== Remove Button ====== */
+.btn-remove {
+  padding: 0.75rem 1.5rem;
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-remove:hover {
+  background: rgba(239, 68, 68, 0.25);
+  color: #ffffff;
+  border-color: #ef4444;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+/* Overrides for shared buttons in dashboard */
+.add-card-btn, .dialog-btn {
+  width: auto;
+  padding: 0.75rem 1.5rem;
+  margin: 0;
+}
+
+/* Active Nav Link State */
+.nav-link-btn.active {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+/* ====== Profile Button ====== */
+.btn-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem 0.4rem 0.4rem;
+  background: rgba(59, 130, 246, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 50px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-profile:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.profile-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}

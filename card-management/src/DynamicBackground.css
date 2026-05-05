@@ -1,0 +1,46 @@
+/* ====== Dynamic Background ====== */
+.bg-container {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-color: transparent;
+}
+
+.bg-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, #1e3a8a, #000000, #0f172a);
+  animation: tailwind-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.bg-glow-blob-1, .bg-glow-blob-2 {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0.3;
+}
+
+.bg-glow-blob-1 {
+  top: 5rem;
+  left: 5rem;
+  background-color: #3b82f6;
+  animation: tailwind-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.bg-glow-blob-2 {
+  bottom: 5rem;
+  right: 5rem;
+  background-color: #1d4ed8;
+  animation: tailwind-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes tailwind-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes tailwind-ping {
+  75%, 100% { transform: scale(2); opacity: 0; }
+}

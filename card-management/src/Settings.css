@@ -1,0 +1,113 @@
+.settings-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 100px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.settings-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .settings-layout {
+    flex-direction: row;
+    min-height: 60vh;
+  }
+}
+
+.settings-sidebar {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+  overflow-x: auto;
+}
+
+@media (min-width: 768px) {
+  .settings-sidebar {
+    flex-direction: column;
+    width: 250px;
+    border-bottom: none;
+    border-right: 1px solid rgba(59, 130, 246, 0.2);
+  }
+}
+
+.settings-tab {
+  padding: 0.75rem 1rem;
+  background: transparent;
+  color: #9ca3af;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.settings-tab:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.settings-tab.active {
+  color: #ffffff;
+  background: rgba(59, 130, 246, 0.2);
+  font-weight: 600;
+}
+
+.settings-panel {
+  padding: 2rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.settings-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.settings-form-group label {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.settings-helper-text {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}

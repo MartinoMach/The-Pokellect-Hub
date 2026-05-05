@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.signup-container {
+  height: 100vh;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ====== Back Button ====== */
+.btn-back-nav {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  padding: 0.6rem 1.25rem;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 50;
+}
+
+.btn-back-nav:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+/* ====== Glassmorphism Form Box ====== */
+.signup-box {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(59, 130, 246, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1.5rem;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.signup-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.signup-logo {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.signup-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+  color: #ffffff;
+  letter-spacing: normal;
+}
+
+.signup-subtitle {
+  font-size: 1.25rem;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.signup-input::placeholder {
+  color: #9ca3af;
+}
+
+.signup-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.error-text {
+  color: #fca5a5;
+  font-size: 0.875rem;
+  margin: 0;
+  background: rgba(239, 68, 68, 0.1);
+  padding: 0.5rem;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover:not(:disabled) {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+.btn-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-prompt {
+  margin-top: 2rem;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.login-link {
+  color: #3b82f6;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+/* ====== Animations ====== */
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Accessibility: Disable translations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .signup-box {
+    animation: simpleFade 0.4s ease-out forwards;
+  }
+
+  @keyframes simpleFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

@@ -1,0 +1,204 @@
+/* ====== Social Page Layout ====== */
+.social-content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 100px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  min-height: 600px;
+  animation: slideUpFade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  box-sizing: border-box;
+}
+
+.social-layout-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ====== Friends Sidebar ====== */
+.social-sidebar {
+  width: 320px;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.social-sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-friends-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-friend-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.social-friend-item:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.social-friend-item.active {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1);
+}
+
+.social-friend-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-friend-item.active .social-friend-avatar {
+  border-color: #3b82f6;
+}
+
+/* ====== Chat Window ====== */
+.social-chat-window {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.chat-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.chat-messages-area {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chat-message-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  max-width: 85%;
+}
+
+.chat-message-wrapper.sent {
+  align-self: flex-end;
+}
+
+.chat-message-wrapper.received {
+  align-self: flex-start;
+}
+
+.chat-message-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.chat-message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chat-message-wrapper.sent .chat-message-content {
+  align-items: flex-end;
+}
+
+.chat-message-wrapper.received .chat-message-content {
+  align-items: flex-start;
+}
+
+.chat-timestamp {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  margin: 0 4px;
+}
+
+.chat-bubble {
+  padding: 0.8rem 1.2rem;
+  border-radius: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.chat-bubble.sent {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border-bottom-right-radius: 0.25rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.chat-bubble.received {
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e7eb;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom-left-radius: 0.25rem;
+}
+
+.chat-input-area {
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+.chat-input {
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+}
+
+.chat-send-btn {
+  border-radius: 2rem;
+}

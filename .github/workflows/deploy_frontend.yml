@@ -1,0 +1,33 @@
+name: Deploy Frontend to Azure Static Web Apps
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'card-management/**'
+      - '.github/workflows/deploy_frontend.yml'
+  workflow_dispatch:
+
+jobs:
+  build_and_deploy_job:
+    runs-on: ubuntu-latest
+    name: Build and Deploy Frontend
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+        with:
+          submodules: true
+
+      - name: Build And Deploy
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          action: "upload"
+          app_location: "/card-management" # Point to your React app folder
+          api_location: ""                 # Leave blank (Backend is hosted separately)
+          output_location: "dist"          # Vite's default build output folder
+          app_build_command: "npm run build"
+        env: # Inject the API URL so Vite bakes it into the production build
+          VITE_API_BASE_URL: "https://pokellect-ebg2afesesh2hsd7.westus3-01.azurewebsites.net/api"

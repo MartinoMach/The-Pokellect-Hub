@@ -1,0 +1,39 @@
+name: Security Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1'
+  push:
+    paths:
+      - 'package.json'
+      - 'backend/package.json'
+      - 'backend/package-lock.json'
+      - 'card-management/package.json'
+      - 'card-management/package-lock.json'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20.x' # Align with other workflows
+
+      - name: Install Dependencies
+        run: |
+          cd backend && npm ci
+          cd ../card-management && npm ci
+
+      - name: Audit Backend NPM Packages
+        run: |
+          cd backend
+          npm audit --audit-level=high
+          
+      - name: Audit Frontend NPM Packages
+        run: |
+          cd card-management
+          npm audit --audit-level=high

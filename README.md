@@ -99,10 +99,5 @@ Designed and developed for **INST347**.
 
 | Name | Role |
 |------|------|
-| **Martins Okorie** | Backend Engineer |
-| **Chris Xu** | DevOps |
-| **Harshitha Jeyakumar** | Full Stack Engineer |
-| **Ethan Tran** | Database Architect |
-| **Neel Patel** | Testing & Performance Engineer |
-
+| **Martins Okorie** | Full Stack Engineer |
 > *"Built for Collectors • Powered by Azure"*

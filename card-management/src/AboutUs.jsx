@@ -8,7 +8,7 @@ import Footer from './Footer.jsx';
 const team = [
   {
     name: "Martins Okorie",
-    role: "Backend Engineer",
+    role: "Full Stack Engineer",
     img: "/martins.png",
     desc: "Architecting robust APIs and seamless integrations for real-time card data.",
   }

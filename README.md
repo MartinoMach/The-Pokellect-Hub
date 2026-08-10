@@ -8,6 +8,7 @@
 ---
 
 - Live App: https://mango-meadow-07a2e9f10.7.azurestaticapps.net/
+- Still in dev... more features incoming!
 
 ## ✨ Features
 

@@ -7,6 +7,8 @@
 
 ---
 
+- Live App: https://mango-meadow-07a2e9f10.7.azurestaticapps.net/
+
 ## ✨ Features
 
 - **Global Card Database:** Browse and search a massive catalog of trading cards across franchises like Pokémon, Dragon Ball, One Piece, Magic, and more.
